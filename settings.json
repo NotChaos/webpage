@@ -1,0 +1,7 @@
+"webPreview.url": "http://localhost:3000",
+"webPreview.mediaScreenOverride": true, // Override default screen object
+"webPreview.mediaScreen": {
+    "Mobile": "380x796", // width and height
+    "Tablet": 768,       // width
+    "Laptop": 1024,
+}

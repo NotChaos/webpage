@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    list-style: lower-latin;
+    text-align: center;
+    border-bottom: 1px white double;
+    margin-bottom: 2cm;
+}
+
+h1:hover {
+    color: green;
+    transition: all 750ms ease-in-out;
+    background-color: #0E0E0E;
+}
+
+h2 {
+    color: white;
+    list-style: lower-latin;
+    text-align: center;
+}
+form {
+    text-align: center;
+}
