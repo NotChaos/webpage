@@ -42,6 +42,18 @@
     object-fit: cover;
     z-index: -1;
   }
+  #content {
+			background-color: #f2f2f2;
+			padding: 10px;
+			cursor: pointer;
+			width: 300px;
+			text-align: justify;
+			overflow: hidden;
+			height: 100px;
+	}
+	#content.expanded {
+		height: auto;
+	}  
   
   /* Style the main content */
   #main-content {
@@ -81,6 +93,10 @@
   <video src="/downloads/Chaos.mp4" autoplay muted class="ended"></video>
   <div class="overlay">Welcome to my website</div>
   <script>
+    function expandText() {
+			var content = document.getElementById("content");
+			content.classList.toggle("expanded");
+		}
   // Fade out the intro video after 3 seconds
   setTimeout(function() {
     var introVideo = document.getElementById('intro-video');
