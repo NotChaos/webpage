@@ -30,6 +30,9 @@ h4 {
     color: white;
     list-style: lower-latin;
     text-align: center;
+a {
+    color: #009CFF;
+    text-align: center;
 }
 form {
     text-align: center;
