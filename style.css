@@ -35,6 +35,9 @@ a {
     color: #009CFF;
     text-align: center;
 }
+video {
+    text-align: center;
+}
 form {
     text-align: center;
 }
