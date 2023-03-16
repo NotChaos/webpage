@@ -3,6 +3,49 @@
 <head>
   <title>Chaos homepage</title>
   <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background-color: #000;
+			color: #fff;
+			font-family: sans-serif;
+			text-align: center;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		#overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+		}
+		#overlay h1 {
+			font-size: 5rem;
+			margin-top: 2rem;
+		}
+	</style>
 </head>
 <body >
   <h1>Chaoticmaster</h1>
@@ -10,6 +53,23 @@
     <source src="/downloads/Chaos.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
+  <video autoplay muted loop>
+		<source src="video.mp4" type="video/mp4">
+		<source src="video.webm" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+	<div id="overlay">
+		<h1>Welcome to My Website!</h1>
+		<p>This is some example text that will be displayed after the video ends.</p>
+	</div>
+	<script>
+		var video = document.querySelector('video');
+		video.addEventListener('ended', function() {
+			var overlay = document.getElementById('overlay');
+			overlay.style.display = 'flex';
+			video.style.display = 'none';
+		});
+	</script>
   <h3>Who am i?</h3>
   <h4>I am a person who likes to develope things for fun :)</h4>
   <h4>and i can programm with multiple languages something simple.</h4>
