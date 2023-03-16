@@ -22,6 +22,11 @@ h2 {
     list-style: lower-latin;
     text-align: center;
 }
+h2 {
+    color: white;
+    list-style: lower-latin;
+    text-align: center;
+}
 form {
     text-align: center;
 }
