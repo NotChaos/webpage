@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Website</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-		video {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			background-color: rgba(0, 0, 0, 0.5);
-			color: #fff;
-			font-size: 3em;
-			text-align: center;
-			opacity: 0;
-			transition: opacity 1s ease-in-out;
-		}
-		video.ended + .overlay {
-			opacity: 1;
-		}
-	</style>
+  <title>Chaos homepage</title>
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 3em;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    video.ended + .overlay {
+      opacity: 1;
+    }
+  </style>	
 </head>
-<body>
-	<video src="myvideo.mp4" autoplay muted class="ended"></video>
-	<div class="overlay">Welcome to my website</div>
-	<script>
-		var video = document.querySelector("video");
-		video.addEventListener("ended", function() {
-			video.classList.add("ended");
-		});
-	</script>
+<body >
+  <h1>Chaoticmaster</h1>
+  <video width="960" height="720" autoplay muted autoplay muted class="ended">
+    <source src="/downloads/Chaos.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <div class="overlay">Welcome to my website</div>
+  <script>
+    var video = document.querySelector("video");
+    video.addEventListener("ended", function() {
+      video.classList.add("ended");
+    });
+  </script>
+  <h3>Who am i?</h3>
+  <h4>I am a person who likes to develope things for fun :)</h4>
+  <h4>and i can programm with multiple languages something simple.</h4>
+  <h2>Programming languages i know:</h2>
+  <h3>Java</h3>
+  <h4>I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2)</h4>
+  <h3>html</h3>
+  <h4>I already made this website but not more so my knowledge isn't really that high</h4>
+  <h3>Skript</h3>
+  <h4>This is a special type of coding language which is used for Minecraft to make a script which will be</h4>
+  <h4>executed like a plugin and i have much knowledge of this programming language because i already used it over half a year</h4>
+  <h2>Do i sell my services?</h2>
+  <h3>No i wont sell anything without special conditions</h3>
+  <a download href="/downloads/Chaos.mp4"> click here to get a test file :)</a>
 </body>
 </html>
