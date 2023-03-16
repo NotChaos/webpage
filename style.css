@@ -14,7 +14,6 @@ h1 {
 h1:hover {
     color: green;
     transition: all 750ms ease-in-out;
-    background-color: #0E0E0E;
 }
 
 h2 {
@@ -22,7 +21,7 @@ h2 {
     list-style: lower-latin;
     text-align: center;
 }
-h2 {
+h3 {
     color: white;
     list-style: lower-latin;
     text-align: center;
