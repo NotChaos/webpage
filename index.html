@@ -1,127 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>	
-  <div id="intro-video">
-  <video autoplay muted loop>
-    <source src="/downlaods/Chaos.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div id="main-content">
-    <h3>Who am I?</h3>
-    <p>I am a person who likes to develop things for fun and can program with multiple languages something simple. I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2). I also know HTML and have made this website, but my knowledge isn't really that high. Additionally, I know Skript, a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin, and I have much knowledge of this programming language because I've used it for over half a year.</p>
-    <h2>Programming languages i know:</h2>
-    <h3>Java</h3>
-    <p>I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2)</p>
-    <h3>html</h3>
-    <p>I already made this website but not more so my knowledge isn't really that high</p>
-    <h3>Skript</h3>
-    <p>This is a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin and i have much knowledge of this programming language because i already used it over half a year</p>
-    <h3>Do I sell my services?</h3>
-    <p>No, I won't sell anything without special conditions.</p>
-    <a download href="/downloads/Chaos.mp4">Click here to download a test file</a>
-    <h1>Registration</h1>
-    <form action="register.php" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username"><br><br>
-  
-     <label for="email">Email:</label>
-     <input type="text" id="email" name="email"><br><br>
-  
-     <label for="password">Password:</label>
-     <input type="password" id="password" name="password"><br><br>
-  
-     <label for="confirm_password">Confirm Password:</label>
-     <input type="password" id="confirm_password" name="confirm_password"><br><br>
-  
-     <input type="submit" value="Register">
-</form>	
-  </div>
-    <title>Chaos homepage</title>
-    <link href="style.css" rel="stylesheet" />
-  <style>
-  /* Center the intro video */
-  #intro-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-  
-  #intro-video video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  #content {
-    background-color: #f2f2f2;
-    padding: 10px;
-    cursor: pointer;
-    width: 300px;
-    text-align: justify;
-    overflow: hidden;
-    height: 100px;		
-  }
-  #content.expanded {
-    height: auto;
-  }  		
-  
-  /* Style the main content */
-  #main-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    padding: 20px;
-    font-size: 16px;
-  }
-  
-  #main-content h3 {
-    font-size: 24px;
-    margin-top: 40px;
-  }
-  
-  #main-content p {
-    margin-top: 20px;
-    line-height: 1.5;
-  }
-  
-  #main-content a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  #main-content a:hover {
-    background-color: #555;
-  }
-</style>
+	<title>Login and Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <video src="/downloads/Chaos.mp4" autoplay muted class="ended"></video>
-  <div class="overlay">Welcome to my website</div>
-  <script>
-    function expandText() {
-	var content = document.getElementById("content");
-	content.classList.toggle("expanded");
+
+	<?php
+	// Start session
+	session_start();
+	
+	// Connect to database
+	$servername = "localhost";
+	$username = "username";
+	$password = "password";
+	$dbname = "myDB";
+	
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	}
+	
+	// Handle login
+	if(isset($_POST['login'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		
+		// Query database for user
+		$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+		$result = $conn->query($sql);
+		
+		if ($result->num_rows == 1) {
+			// User found, set session variable
+			$_SESSION['username'] = $username;
+			header("Location: dashboard.php");
+			exit();
+		} else {
+			// User not found, show error message
+			echo "<p class='error'>Invalid username or password.</p>";
 		}
-  // Fade out the intro video after 3 seconds
-  setTimeout(function() {
-    var introVideo = document.getElementById('intro-video');
-    introVideo.style.opacity = 100;
-    setTimeout(function() {
-      introVideo.style.display = 'none';
-    }, 1000);
-  }, 3000);
-</script>
+	}
+	
+	// Handle registration
+	if(isset($_POST['register'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		
+		// Insert new user into database
+		$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+		
+		if ($conn->query($sql) === TRUE) {
+			// User successfully registered, set session variable
+			$_SESSION['username'] = $username;
+			header("Location: dashboard.php");
+			exit();
+		} else {
+			// Error inserting user into database, show error message
+			echo "<p class='error'>Error registering user: " . $conn->error . "</p>";
+		}
+	}
+	
+	// Close database connection
+	$conn->close();
+	?>
+
+	<div class="container">
+		<h1>Login and Registration Form</h1>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+
+			<input type="submit" name="login" value="Login">
+			<input type="submit" name="register" value="Register">
+		</form>
+	</div>
+
 </body>
 </html>
