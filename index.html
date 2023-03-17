@@ -12,7 +12,6 @@
 </div>
 <div id="text">
 		<h1>Welcome to my website!</h1>
-		<p>This is some example text that appears after the video disappears.</p>
 	</div>
 <div id="main-content">
     <div class="tab">
@@ -105,13 +104,8 @@
     function expandText() {
 			var content = document.getElementById("content");
 			content.classList.toggle("expanded");
-		}
-  // Wait 5 seconds before hiding the video and showing the text
-  setTimeout(function(){
-    document.getElementById("video").style.display = "none";
-    document.getElementById("text").style.display = "block";
-  }, 3000);
-  // Fade out the intro video after 3 seconds
+     }
+
 </script>
 </body>
 </html>
