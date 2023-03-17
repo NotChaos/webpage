@@ -20,6 +20,27 @@
     <h3>Do I sell my services?</h3>
     <p>No, I won't sell anything without special conditions.</p>
     <a download href="/downloads/Chaos.mp4">Click here to download a test file</a>
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+      <button class="tablinks" onclick="openTab(event, 'about')">About Us</button>
+      <button class="tablinks" onclick="openTab(event, 'contact')">Contact Us</button>
+    </div>
+
+    <!-- Tab Content HTML -->
+    <div id="home" class="tabcontent" style="display: block;">
+      <h3>Home</h3>
+      <p>Welcome to our website!</p>
+    </div>
+
+    <div id="about" class="tabcontent">
+      <h3>About Us</h3>
+      <p>We are a company dedicated to creating awesome products!</p>
+    </div>
+
+    <div id="contact" class="tabcontent">
+      <h3>Contact Us</h3>
+      <p>You can contact us at <a href="mailto:contact@ourcompany.com">contact@ourcompany.com</a>.</p>
+    </div>		
   </div>
     <title>Chaos homepage</title>
     <link href="style.css" rel="stylesheet" />
@@ -90,28 +111,7 @@
 </style>
 </head>
 <body>
-  <div class="tab">
-      <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-      <button class="tablinks" onclick="openTab(event, 'about')">About Us</button>
-      <button class="tablinks" onclick="openTab(event, 'contact')">Contact Us</button>
-    </div>
-
-    <!-- Tab Content HTML -->
-    <div id="home" class="tabcontent" style="display: block;">
-      <h3>Home</h3>
-      <p>Welcome to our website!</p>
-    </div>
-
-    <div id="about" class="tabcontent">
-      <h3>About Us</h3>
-      <p>We are a company dedicated to creating awesome products!</p>
-    </div>
-
-    <div id="contact" class="tabcontent">
-      <h3>Contact Us</h3>
-      <p>You can contact us at <a href="mailto:contact@ourcompany.com">contact@ourcompany.com</a>.</p>
-    </div>	
-  <video src="/downloads/Chaos.mp4" autoplay muted class="ended"></video>
+  <video src="/downloads/Chaos.mp4" autoplay muted loop class="ended"></video>
   <div class="overlay">Welcome to my website</div>
   <script>
     function openTab(evt, tabName) {
