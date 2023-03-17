@@ -11,13 +11,13 @@
       <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>
       <button class="tablinks" onclick="window.location.href='/pages/discord.html'">Discord</button>
     </div>
-<!-- Tab Content HTML -->
-<div id="home" class="tabcontent" style="display: block;">
-  <h3>Chaoticmaster</h3>
-  <p>Welcome to my website! You can find here a bit more out of me here and maybe get inspiration to make your own page</p>
+
+<div id="issius" class="tabcontent" style="display: block;">
+    <h2>When you have issues with this page or me:</h3>
+    <p>Contact me on my discord account Chaoticmaster#0878 or ChaosAltAccount#5681 or send me an email inseatd to <a href="mailto:ChaoticmasterOfficial@gmail.com">ChaoticmasterOfficial.gmail.com</a> so i can fix the problem</p>
 </div>
   </div>
-    <title>Chaos homepage</title>
+    <title>Chaos issius</title>
     <link href="style.css" rel="stylesheet" />
   <style>
   }
@@ -30,23 +30,23 @@
   </video>
   <script>
     function openTab(evt, tabName) {
-        // Declare all variables
+
         var i, tabcontent, tablinks;
 scss
 Copy code
-    // Get all elements with class="tabcontent" and hide them
+
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
+
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
+
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
