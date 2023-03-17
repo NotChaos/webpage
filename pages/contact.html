@@ -6,7 +6,7 @@
     <div class="tab">
       <button class="tablinks" onclick="window.location.href='index.html'">Home</button>
       <button class="tablinks" onclick="window.location.href='/pages/nextpage.html'">About Me</button>
-      <button class="tablinks actibe" onclick="openTab(event, 'contact')">Contact Me</button>
+      <button class="tablinks active" onclick="openTab(event, 'contact')">Contact Me</button>
       <button class="tablinks" onclick="window.location.href='/pages/issius.html'">Issius</button>
       <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>
       <button class="tablinks" onclick="window.location.href='/pages/discord.html'">Discord</button>
@@ -28,23 +28,20 @@
     function openTab(evt, tabName) {
 
         var i, tabcontent, tablinks;
-scss
-Copy code
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
   </script>
 </body>
 </html>
