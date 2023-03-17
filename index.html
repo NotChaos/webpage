@@ -1,84 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <div id="intro-video">
+  <video autoplay muted>
+    <source src="/downlaods/Chaos.mp4" type="video/mp4">
+  </video>
+</div>
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-    
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Responsive Login Form Sign In Sign Up</title>
-    </head>
-    <body>
-        <div class="login">
-            <div class="login__content">
-                <div class="login__img">
-                    <img src="assets/img/img-login.svg" alt="">
-                </div>
-
-                <div class="login__forms">
-                    <form action="" class="login__registre" id="login-in">
-                        <h1 class="login__title">Sign In</h1>
-    
-                        <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
-                        </div>
-    
-                        <div class="login__box">
-                            <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
-                        </div>
-
-                        <a href="#" class="login__forgot">Forgot password?</a>
-
-                        <a href="#" class="login__button">Sign In</a>
-
-                        <div>
-                            <span class="login__account">Don't have an Account ?</span>
-                            <span class="login__signin" id="sign-up">Sign Up</span>
-                        </div>
-                    </form>
-
-                    <form action="" class="login__create none" id="login-up">
-                        <h1 class="login__title">Create Account</h1>
-    
-                        <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
-                        </div>
-    
-                        <div class="login__box">
-                            <i class='bx bx-at login__icon'></i>
-                            <input type="text" placeholder="Email" class="login__input">
-                        </div>
-
-                        <div class="login__box">
-                            <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
-                        </div>
-
-                        <a href="#" class="login__button">Sign Up</a>
-
-                        <div>
-                            <span class="login__account">Already have an Account ?</span>
-                            <span class="login__signup" id="sign-in">Sign In</span>
-                        </div>
-
-                        <div class="login__social">
-                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+<div id="main-content">
+    <h3>Who am I?</h3>
+    <p>I am a person who likes to develop things for fun and can program with multiple languages something simple. I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2). I also know HTML and have made this website, but my knowledge isn't really that high. Additionally, I know Skript, a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin, and I have much knowledge of this programming language because I've used it for over half a year.</p>
+    <h2>Programming languages i know:</h2>
+    <h3>Java</h3>
+    <p>I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2)</p>
+    <h3>html</h3>
+    <p>I already made this website but not more so my knowledge isn't really that high</p>
+    <h3>Skript</h3>
+    <p>This is a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin and i have much knowledge of this programming language because i already used it over half a year</p>
+    <h3>Do I sell my services?</h3>
+    <p>No, I won't sell anything without special conditions.</p>
+    <a download href="/downloads/Chaos.mp4">Click here to download a test file</a>
+  </div>
+    <title>Chaos homepage</title>
+    <link href="style.css" rel="stylesheet" />
+  <style>
+  /* Center the intro video */
+  #intro-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  #intro-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  #content {
+			background-color: #f2f2f2;
+			padding: 10px;
+			cursor: pointer;
+			width: 300px;
+			text-align: justify;
+			overflow: hidden;
+			height: 100px;
+	}
+	#content.expanded {
+		height: auto;
+	}  
+  
+  /* Style the main content */
+  #main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  #main-content h3 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+  
+  #main-content p {
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  #main-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #main-content a:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body>
+  <video src="/downloads/Chaos.mp4" autoplay muted class="ended"></video>
+  <div class="overlay">Welcome to my website</div>
+  <script>
+    function expandText() {
+			var content = document.getElementById("content");
+			content.classList.toggle("expanded");
+		}
+  // Fade out the intro video after 3 seconds
+  setTimeout(function() {
+    var introVideo = document.getElementById('intro-video');
+    introVideo.style.opacity = 0;
+    setTimeout(function() {
+      introVideo.style.display = 'none';
+    }, 1000);
+  }, 3000);
+</script>
+</body>
 </html>
