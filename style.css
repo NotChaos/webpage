@@ -49,37 +49,27 @@ video {
 form {
     text-align: center;
 }
-/* Style the tab content */
-.tab-content {
-  display: none;
-  padding: 15px;
-}
-.tab-content.active {
-  display: block;
-}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
 
-/* Style the tab button container */
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
 
-/* Style the tab button */
-.tab-button {
-  background-color: #ccc;
-  border: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 5px;
-  cursor: pointer;
-}
+  .tab button:hover {
+    background-color: #ddd;
+  }
 
-/* Style the active tab button */
-.tab-button.active {
-  background-color: #f1f1f1;
-}
+  .tab button.active {
+    background-color: #ccc;
+  }
