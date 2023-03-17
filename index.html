@@ -5,8 +5,15 @@
   <video autoplay muted>
     <source src="/downlaods/Chaos.mp4" type="video/mp4">
   </video>
+  <video id="video" width="640" height="360" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+   </video>	  
 </div>
-
+<div id="text">
+		<h1>Welcome to my website!</h1>
+		<p>This is some example text that appears after the video disappears.</p>
+	</div>
 <div id="main-content">
     <div class="tab">
       <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
@@ -99,14 +106,12 @@
 			var content = document.getElementById("content");
 			content.classList.toggle("expanded");
 		}
-  // Fade out the intro video after 3 seconds
-  setTimeout(function() {
-    var introVideo = document.getElementById('intro-video');
-    introVideo.style.opacity = 0;
-    setTimeout(function() {
-      introVideo.style.display = 'none';
-    }, 1000);
+  // Wait 5 seconds before hiding the video and showing the text
+  setTimeout(function(){
+    document.getElementById("video").style.display = "none";
+    document.getElementById("text").style.display = "block";
   }, 3000);
+  // Fade out the intro video after 3 seconds
 </script>
 </body>
 </html>
