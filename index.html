@@ -1,55 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>	  
 <div>	  
 <div id="main-content">
     <div class="tab">
       <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-      <button class="tablinks" onclick="openTab(event, 'about')">About Me</button>
-      <button class="tablinks" onclick="openTab(event, 'contact')">Contact Me</button>
-      <button class="tablinks" onclick="openTab(event, 'issius')">Issius</button>
-      <button class="tablinks" onclick="openTab(event, 'downloads')">Downloads</button>	
-      <button class="tablinks" onclick="openTab(event, 'dc')">Discord</button>	    
+      <button class="tablinks" onclick="window.location.href='/pages/nextpage.html'">About Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/contact.html'">Contact Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/issius.html'">Issius</button>
+      <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>	
+      <button class="tablinks" onclick="window.location.href='/pages/discord.html'">Discord</button>	    
     </div>
-
-    <!-- Tab Content HTML -->
-    <div id="home" class="tabcontent" style="display: block;">
-      <h3>Chaoticmaster</h3>
-      <p>Welcome to my website! You can find here a bit more out of me here and maybe get inspiration to make your own page</p>
-    </div>
-
-    <div id="about" class="tabcontent">
-      <h3>About Me</h3>
-      <button onclick="window.location.href='nextpage.html'">Go to Next Page</button>	    
-      <h3>Who am I?</h3>
-      <p>I am a person who likes to develop things for fun and can program with multiple languages something simple. I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2). I also know HTML and have made this website, but my knowledge isn't really that high. Additionally, I know Skript, a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin, and I have much knowledge of this programming language because I've used it for over half a year.</p>
-      <h2>Programming languages i know:</h2>
-      <h3>Java</h3>
-      <p>I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2)</p>
-      <h3>html</h3>
-      <p>I already made this website but not more so my knowledge isn't really that high</p>
-      <h3>Skript</h3>
-      <p>This is a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin and i have much knowledge of this programming language because i already used it over half a year</p>
-    </div>
-
-    <div id="contact" class="tabcontent">
-      <h2>Contact Me</h3>
-      <p>You can contact me on my discord account Chaoticmaster#0878 or ChaosAltAccount#5681</p>
-      <p>If you have something important and private then send me a email to <a href="mailto:ChaoticmasterOfficial@gmail.com">ChaoticmasterOfficial.gmail.com</a></p>	    
-    </div>
-    <div id="issius" class="tabcontent">
-      <h2>When you have issues with this page or me:</h3>
-      <p>Contact me on my discord account Chaoticmaster#0878 or ChaosAltAccount#5681 or send me an email inseatd to <a href="mailto:ChaoticmasterOfficial@gmail.com">ChaoticmasterOfficial.gmail.com</a> so i can fix the problem</p> 
-    </div>
-    <div id="downloads" class="tabcontent">
-      <h2>Here will be some of the downloads for anyone to get for some reason :)</h3>
-      <p>My profile picture to<a download href="/downloads/Chaos.mp4">download</a></p>
-    </div>
-    <div id="dc" class="tabcontent">
-      <h2>Here is a list of Discord servers i like/own/moderate</h3>
-      <p>A german server i like where people talk when they want a lot (especially in voice calls) <a href="https://discord.gg/jtHenNrcbm">TheSlayWolf</a></p>
-      <p>A english server related to a Minecraft server with the IP CheesBox.Minehut.gg <a href="https://discord.gg/pzYFyB89zV">CheesBox</a></p>
-    </div>	
+php
+Copy code
+<!-- Tab Content HTML -->
+<div id="home" class="tabcontent" style="display: block;">
+  <h3>Chaoticmaster</h3>
+  <p>Welcome to my website! You can find here a bit more out of me here and maybe get inspiration to make your own page</p>
+</div>
   </div>
     <title>Chaos homepage</title>
     <link href="style.css" rel="stylesheet" />
@@ -66,28 +34,24 @@
     function openTab(evt, tabName) {
         // Declare all variables
         var i, tabcontent, tablinks;
+scss
+Copy code
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
 
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }	  
-    function expandText() {
-			var content = document.getElementById("content");
-			content.classList.toggle("expanded");
-     }
-
-</script>
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+  </script>
 </body>
 </html>
