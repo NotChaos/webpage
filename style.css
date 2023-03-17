@@ -1,5 +1,5 @@
 p {
-    color: white;    
+    color: #2D0040;    
 }
 body {
     background-color: black;
@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    color: white;
+    color: #FF00A1;
     list-style: lower-latin;
     text-align: center;
     border-bottom: 1px white double;
