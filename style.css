@@ -48,3 +48,37 @@ video {
 form {
     text-align: center;
 }
+/* Style the tab content */
+.tab-content {
+  display: none;
+  padding: 15px;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Style the tab button container */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style the tab button */
+.tab-button {
+  background-color: #ccc;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Style the active tab button */
+.tab-button.active {
+  background-color: #f1f1f1;
+}
