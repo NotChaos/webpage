@@ -1,0 +1,22 @@
+p {
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+  }
+  img {
+    float: right;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 0 10px 10px;
+  }
+  p {
+    font-size: 18px;
+  }
+  img {
+    float: right;
+  }
+        
