@@ -31,9 +31,9 @@
 
   p {
     font-size: 18px;
+    text-align: justify;
   }
   img {
-    float: middle;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 5px;
@@ -59,7 +59,4 @@
 h1:hover {
     color: green;
     transition: all 750ms ease-in-out;
-}
-h5 {
-  margin-bottom: 500px;
 }
