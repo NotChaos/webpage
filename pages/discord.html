@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaos homepage</title>
+  <link href="style.css" rel="stylesheet" />
+  <div id="main-content">
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='/pages/index.html'">Home</button>
+      <button class="tablinks" onclick="window.location.href='/pages/nextpage.html'">About Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/contact.html'">Contact Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/issius.html'">Issius</button>
+      <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>
+      <button class="tablinks active" onclick="openTab(event, 'discord')">Discord</button>
+    </div>
+  </div>
+  <style>
+    img {
+      float: middle ;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 0 0 10px 10px;
+    }
+
+    p {
+      font-size: 18px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 0 10px 10px 0;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    a {
+      text-align: center;
+      font-size: large;
+    }
+
+    #discord-header {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="discord" class="tabcontent" style="display: block;">
+      <div id="discord-header">
+        <h1>Here is a list of Discord servers I like/own/moderate</h1>
+      </div>
+      <p>A German server I like where people talk a lot (especially in voice calls) and they do sometimes events and giveaways with some nice prices</p>
+      <div style="text-align: center;">
+        <div style="background-color:#2F007D; padding: 10px; border-radius: 25px; border: 2px solid white; display:inline-block;">
+          <h5 style="text-align:center; color: white;"><a href="https://discord.gg/jtHenNrcbm">TheSlayWolf</a></h5>
+        </div>
+        <div style="display:inline-block;">
+          <img src="/downloads/TheSlayWolf.jpg" alt="TheSlayWolf" style="width:250px;height:250px;">
+        </div>
+      </div>
+      <p>An English server related to a Minecraft server with the IP CheesBox.Minehut.gg:</p>
+      <div style="text-align: center;">
+        <div style="background-color:#2F007D; padding: 10px; border-radius: 25px; border: 2px solid white; display:inline-block;">
+          <h5 style="text-align:center; color: white;"><a href="https://discord.gg/pzYFyB89zV">CheesBox</a></h5>
+        </div>
+        <div style="display:inline-block;">
+          <img src="/downloads/CheesBox.png" alt="CheesBox" style="width:250px;height:250px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div>
+<div id="main-content">
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+      <button class="tablinks" onclick="window.location.href='/pages/nextpage.html'">About Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/contact.html'">Contact Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/issius.html'">Issius</button>
+      <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>
+      <button class="tablinks" onclick="window.location.href='/pages/discord.html'">Discord</button>
+    </div>
+<!-- Tab Content HTML -->
+<div id="home" class="tabcontent" style="display: block;">
+  <h1>Chaoticmaster</h1>
+  <p>Welcome to my website! You can find here a bit more out of me here and maybe get inspiration to make your own page</p>
+</div>
+  </div>
+    <title>Chaos homepage</title>
+    <link href="style.css" rel="stylesheet" />
+  <style>
+  }
+</style>
+</head>
+<body>
+  <video width="960" height="720" loop muted>
+    <source src="/downloads/Chaos.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <script>
+    function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+scss
+Copy code
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+  </script>
+</body>
+</html>
