@@ -47,4 +47,15 @@
     margin: 0 10px 10px 0;
     display: inline-block;
   }
-    
+  h1 {
+    color: #AAFCFF;
+    list-style: lower-latin;
+    text-align: center;
+    border-bottom: 1px white double;
+    margin-bottom: 2cm;
+}
+
+h1:hover {
+    color: green;
+    transition: all 750ms ease-in-out;
+}
