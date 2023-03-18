@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div>
+<div id="main-content">
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='/pages/index.html'">Home</button>
+      <button class="tablinks active" onclick="openTab(event, 'nextpage')">About Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/contact.html'">Contact Me</button>
+      <button class="tablinks" onclick="window.location.href='/pages/issius.html'">Issius</button>
+      <button class="tablinks" onclick="window.location.href='/pages/downloads.html'">Downloads</button>
+      <button class="tablinks" onclick="window.location.href='/pages/discord.html'">Discord</button>
+    </div>
+
+<div id="nextpage" class="tabcontent" style="display: block;">
+    <h3>Who am I?</h3>
+    <p>I am a person who likes to develop things for fun and can program with multiple languages something simple. I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2). I also know HTML and have made this website, but my knowledge isn't really that high. Additionally, I know Skript, a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin, and I have much knowledge of this programming language because I've used it for over half a year.</p>
+    <h2>Programming languages i know:</h2>
+    <h3>Java</h3>
+    <p>I currently have 2 projects with making a server Plugin for Minecraft (Paper 1.17.1 and Spigot 1.18.2)</p>
+    <h3>html</h3>
+    <p>I already made this website but not more so my knowledge isn't really that high</p>
+    <h3>Skript</h3>
+    <p>This is a special type of coding language which is used for Minecraft to make a script which will be executed like a plugin and i have much knowledge of this programming language because i already used it over half a year</p>
+    </div>
+</div>
+  </div>
+    <title>Chaos issius</title>
+    <link href="style.css" rel="stylesheet" />
+  <style>
+  }
+</style>
+</head>
+<body>
+  <video width="960" height="720" loop muted>
+    <source src="/downloads/Chaos.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <script>
+    function openTab(evt, tabName) {
+
+        var i, tabcontent, tablinks;
+scss
+Copy code
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+  </script>
+</body>
+</html>
