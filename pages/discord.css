@@ -46,6 +46,7 @@
     padding: 5px;
     margin: 0 10px 10px 0;
     display: inline-block;
+    margin-top: 10px;
   }
   h1 {
     color: #AAFCFF;
@@ -58,4 +59,7 @@
 h1:hover {
     color: green;
     transition: all 750ms ease-in-out;
+}
+h5 {
+  margin-bottom: 500px;
 }
