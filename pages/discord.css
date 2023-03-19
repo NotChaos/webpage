@@ -1,11 +1,21 @@
-  .tab {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-top: 0px;
-  }
+body {
+  background-color: #1C1C1C;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  border: 0px solid #4D4D4D;
+  background-color: #A4A4A4;
+}
+
 
   .tab button {
     background-color: inherit;
@@ -32,6 +42,7 @@
   p {
     font-size: 18px;
     text-align: justify;
+    color: white;
   }
   img {
     border: 2px solid #ccc;
@@ -52,11 +63,105 @@
     color: #AAFCFF;
     list-style: lower-latin;
     text-align: center;
-    margin-bottom: 2cm;
-    margin-top: 300px;
+    margin-bottom: 1cm;
+    margin-top: 50px;
 }
 
 h1:hover {
     color: green;
     transition: all 750ms ease-in-out;
+}
+img {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 0 10px 10px;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 400px;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+a {
+  text-align: center;
+  font-size: large;
+}
+
+#discord-header {
+  margin-top: 50px;
+}
+h5 {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+a:link {
+  color: rgb(0, 255, 0);
+  background-color: transparent;
+  text-decoration: none;
+  transition: ease-out 0.5s;
+}
+a:hover {
+  color: rgb(187, 255, 0);
+}
+
+
+.tab button.active {
+  background-color: #6A6A6A;
+}
+#content {
+background-color: #f2f2f2;
+padding: 10px;
+cursor: pointer;
+width: 300px;
+text-align: justify;
+overflow: hidden;
+height: 100px;
+}
+#content.expanded {
+height: auto;
+}  
+
+/* Style the main content */
+#main-content {
+max-width: 800px;
+margin: 0 auto;
+text-align: justify;
+padding: 20px;
+font-size: 16px;
+}
+
+#main-content h3 {
+font-size: 24px;
+margin-top: 40px;
+}
+
+#main-content p {
+margin-top: 20px;
+line-height: 1.5;
+}
+
+#main-content a {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #333;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+}
+
+#main-content a:hover {
+background-color: #555;
 }
