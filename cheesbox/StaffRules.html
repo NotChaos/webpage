@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaos Discord</title>
+  <link href="Style.css" rel="stylesheet" />
+  <div id="main-content">
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffGuide.html'">Staff Guide</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffList.html'">Staff List</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/ServerManagement.html'">Server Management</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/RankPerms.html'">Rank Permissions</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/Punishments.html'">Punishments</button>
+      <button class="tablinks active" onclick="openTab(event, 'StaffRules')">StaffRules</button>
+    </div>
+  </div>
+  <style>
+    h5 {
+      display: inline-block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    a:link {
+      color: rgb(0, 255, 0);
+      background-color: transparent;
+      text-decoration: none;
+      transition: ease-out 0.5s;
+    }
+    a:hover {
+      color: rgb(187, 255, 0);
+    }
+    #discord-button {
+      cursor: pointer;
+    }
+    .rounded-box {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="discord" class="tabcontent" style="display: block;">
+      <div id="discord-header">
+        <h1>Staff rules for every member of the staff team</h1>
+        <div class="rounded-box">
+            <h3>1.<p>Do not abuse your power as a staff member. This includes using commands or privileges to gain an advantage over players or to bully them.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>2.<p>Respect players and their opinions. Do not insult, discriminate, or harass players based on their race, gender, sexuality, religion, or any other characteristic.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>3.<p>Handle all reports and complaints from players in a timely and professional manner. Make sure to gather all necessary evidence before taking action.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>4.<p>Do not use your staff position to promote personal projects or gain personal benefits.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>5.<p>Be active on the server and engage with players. Help new players get started, and answer questions from players.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>6.<p>Do not give special treatment to friends or players you know outside of the server.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>7.<p>Report any bugs or glitches to higher staff members as soon as possible.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>8.<p>Keep the server and its community a safe and enjoyable place for all players.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>9.<p>Follow the server's specific guidelines and rules, and communicate with higher staff members if you have any questions or concerns.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>10.<p>Continuously educate yourself about the game and its updates, and be willing to learn new things to improve your performance as a staff member.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>11.<p>Maintain a positive attitude and lead by example for other staff members and players.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>12.<p>Do not share any personal information about players or other staff members without their permission.</p></h3>
+          </div>
+          
+          <div class="rounded-box">
+            <h3>13.<p>Be accountable for your actions and decisions as a staff member, and take responsibility for any mistakes or issues that arise.</p></h3>
+          </div>
+        <h4>Overall, the main goal for staff members should be to create a welcoming and safe environment for players to enjoy the game.</h4>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
