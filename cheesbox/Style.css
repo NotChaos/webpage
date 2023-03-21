@@ -30,12 +30,12 @@ h2 {
     color: white;
 }
 h3 {
-    color: white;
+    color: rgb(255, 255, 255);
     margin-left: 30px;
 }
 h4 {
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .tab {
@@ -71,4 +71,39 @@ h4 {
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .box {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  .arrow::before {
+    content: "";
+    display: block;
+    height: 30px;
+    border-left: 2px solid black;
+    margin-top: -15px;
+  }
+  .rank {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+              .name {
+    margin-top: 10px;
   }

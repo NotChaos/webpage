@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaos Discord</title>
+  <link href="Style.css" rel="stylesheet" />
+  <div id="main-content">
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffGuide.html'">Staff Guide</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffList.html'">Staff List</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/ServerManagement.html'">Server Management</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/RankPerms.html'">Rank Permissions</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/Punishments.html'">Punishments</button>
+      <button class="tablinks active" onclick="openTab(event, 'StaffRules')">Staff Rules</button>
+    </div>
+  </div>
+  <style>
+    h5 {
+      display: inline-block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    a:link {
+      color: rgb(0, 255, 0);
+      background-color: transparent;
+      text-decoration: none;
+      transition: ease-out 0.5s;
+    }
+    a:hover {
+      color: rgb(187, 255, 0);
+    }
+    #discord-button {
+      cursor: pointer;
+    }
+    .rounded-box {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+		<div class="box">
+			<div class="rank">Owner</div>
+			<div class="name">John Smith</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Co-owner</div>
+			<div class="name">Jane Doe</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Staff Manager</div>
+			<div class="name">Bob Johnson</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Developer</div>
+			<div class="name"></div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Admin</div>
+			<div class="name"></div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Moderator</div>
+			<div class="name"></div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Helper</div>
+			<div class="name"></div>
+		</div>
+	</div>
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>

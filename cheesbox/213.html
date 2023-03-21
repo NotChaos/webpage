@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tree of Text Connection Example</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 20px;
+		}
+		.box {
+			background-color: #f7f7f7;
+			padding: 10px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.arrow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 20px;
+		}
+		.arrow::before {
+			content: "";
+			display: block;
+			height: 30px;
+			border-left: 2px solid black;
+			margin-top: -15px;
+		}
+		.rank {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="rank">Owner</div>
+			<div class="name">John Smith</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Co-owner</div>
+			<div class="name">Jane Doe</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Staff Manager</div>
+			<div class="name">Bob Johnson</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Developer</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Admin</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Moderator</div>
+		</div>
+		<div class="arrow"></div>
+		<div class="box">
+			<div class="rank">Head Helper</div>
+		</div>
+	</div>
+</body>
+</html>
