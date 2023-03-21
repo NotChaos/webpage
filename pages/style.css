@@ -15,6 +15,7 @@ h1 {
     list-style: lower-latin;
     text-align: center;
     margin-bottom: 2cm;
+    margin-top: 50px;
 }
 
 h1:hover {
