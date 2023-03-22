@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaos Discord</title>
+  <link href="Style.css" rel="stylesheet" />
+  <div id="main-content">
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffGuide.html'">Staff Guide</button>
+      <button class="tablinks active" onclick="openTab(event, 'StaffList')">Staff List</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/ServerManagement.html'">Server Management</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/RankPerms.html'">Rank Permissions</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/Punishments.html'">Punishments</button>
+      <button class="tablinks" onclick="window.location.href='/cheesbox/StaffRules.html'">Staff Rules</button>
+    </div>
+  </div>
+  <style>
+    h5 {
+      display: inline-block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    a:link {
+      color: rgb(0, 255, 0);
+      background-color: transparent;
+      text-decoration: none;
+      transition: ease-out 0.5s;
+    }
+    a:hover {
+      color: rgb(187, 255, 0);
+    }
+    #discord-button {
+      cursor: pointer;
+    }
+    .rounded-box {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="discord" class="tabcontent" style="display: block;">
+      <div id="discord-header">
+        <h1>Staff Guide</h1>
+        <h2>Discord Guide:</h2> <h2>
+            <table style="margin: 0px 50px; border-collapse: collapse; border: 2px solid black; border-radius: 10px;">
+              <thead>
+                <tr style="border-bottom: 2px solid black;">
+                  <th style="text-align: center; padding: 10px;">Offense</th>
+                  <th style="text-align: center; padding: 10px;">Penalty</th>
+                  <th style="text-align: center; padding: 10px;">Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 2px solid black;">
+                  <td style="text-align: center; padding: 10px;">racism</td>
+                  <td style="text-align: center; padding: 10px;">30 minute mute</td>
+                  <td style="text-align: center; padding: 10px;">"You nigga"</td>
+                </tr>
+                <tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">sluring</td>
+                    <td style="text-align: center; padding: 10px;">30 minute mute</td>
+                    <td style="text-align: center; padding: 10px;">"You bastard"</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">NSFW</td>
+                    <td style="text-align: center; padding: 10px;">30 minute mute</td>
+                    <td style="text-align: center; padding: 10px;">Porn etc.</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">mass ping</td>
+                    <td style="text-align: center; padding: 10px;">1 hour mute (+1 hour for every new message after 3 messages)</td>
+                    <td style="text-align: center; padding: 10px;">@staff, @everyone, @booster etc.</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">spam</td>
+                    <td style="text-align: center; padding: 10px;">mute after 2 messages (+5 minutes per message more)</td>
+                    <td style="text-align: center; padding: 10px;">SPAM SPAM SPAM SPAM SPAM</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">false punishment</td>
+                    <td style="text-align: center; padding: 10px;">given punishment times 2 for staff</td>
+                    <td style="text-align: center; padding: 10px;">1 day ban without reason</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">advertising</td>
+                    <td style="text-align: center; padding: 10px;">1 day mute</td>
+                    <td style="text-align: center; padding: 10px;">join https://discord.gg/ExampleLink</td>
+                  </tr>
+                  <h2>Minecraft Guide</h2>
+                  <tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">overuse of creativemode</td>
+                    <td style="text-align: center; padding: 10px;">20 minute ban</td>
+                    <td style="text-align: center; padding: 10px;">using creativemode much without reasons</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">false punishment</td>
+                    <td style="text-align: center; padding: 10px;">given punishment times 2 for staff</td>
+                    <td style="text-align: center; padding: 10px;">banned a person for 1 day without a reason</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">racism</td>
+                    <td style="text-align: center; padding: 10px;">10 minute mute</td>
+                    <td style="text-align: center; padding: 10px;">"You nigga"</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">NSFW</td>
+                    <td style="text-align: center; padding: 10px;">30 minute mute</td>
+                    <td style="text-align: center; padding: 10px;">Pornlink etc.</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">spam</td>
+                    <td style="text-align: center; padding: 10px;">mute after 2 messages (+5 minutes per message more)</td>
+                    <td style="text-align: center; padding: 10px;">SPAM SPAM SPAM SPAM SPAM</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">sluring</td>
+                    <td style="text-align: center; padding: 10px;">10 minute mute</td>
+                    <td style="text-align: center; padding: 10px;">"You bastard"</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">advertising</td>
+                    <td style="text-align: center; padding: 10px;">3 day ban</td>
+                    <td style="text-align: center; padding: 10px;">"join https://discord.gg/ExampleLink"</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">hacking</td>
+                    <td style="text-align: center; padding: 10px;">7 day ban</td>
+                    <td style="text-align: center; padding: 10px;">speedhack, flyhack</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">naked killing</td>
+                    <td style="text-align: center; padding: 10px;">kick</td>
+                    <td style="text-align: center; padding: 10px;">killing people without gear</td>
+                  </tr><tr style="border-bottom: 2px solid black;">
+                    <td style="text-align: center; padding: 10px;">mass killinga</td>
+                    <td style="text-align: center; padding: 10px;">kick (10 kills in 2 minutes = 1 hour ban)</td>
+                    <td style="text-align: center; padding: 10px;">killing people in large quantities</td>
+                  </tr>
+              </tbody>
+            </table>
+          </h2>
+          
+      </div>
+    </div>
+  </div>
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
